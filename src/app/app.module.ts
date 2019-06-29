@@ -9,6 +9,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { FormsModule } from '@angular/forms';
 
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { RegisterComponent } from './register/register.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
     AppComponent,
     LoginComponent,
     DashboardComponent,
-    PagenotfoundComponent
+    PagenotfoundComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
