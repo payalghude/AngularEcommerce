@@ -1,1 +1,23 @@
 <p>dashboard works!</p>
+<table>
+        <td>
+         RoomName 
+        </td>
+             <td>
+                FloorNumber 
+             </td>
+             <td>
+                BuildingName 
+             </td>
+<tr *ngFor="let room of roomDetail; let i = index">
+    <td>
+    {{room.roomName}}
+    </td>
+    <td>
+     {{room.floorNumber}}
+    </td>
+    <td>
+   {{room.buildingName}}
+    </td>
+</tr>
+<table>
