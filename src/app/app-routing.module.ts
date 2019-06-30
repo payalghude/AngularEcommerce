@@ -6,12 +6,13 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
 import { UserRegistrationComponent } from './user-registration/user-registration.component';
+import { AuthGuard } from './auth.guard';
 
 
 const routes: Routes = [
   {path:'', component: LoginComponent},
   {path:'dashboard' ,component:DashboardComponent},
-  {path:'AdminDashboard' ,component:AdminDashboardComponent},
+  {path:'AdminDashboard' ,component:AdminDashboardComponent,  canActivate: [AuthGuard]},
   {path:'UserDashboard' ,component:UserDashboardComponent},
   {path:'UserRegistration' ,component:UserRegistrationComponent},
   {path: '**', component: PagenotfoundComponent}
