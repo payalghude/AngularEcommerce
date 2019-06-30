@@ -14,6 +14,7 @@ import { UserDashboardComponent } from './user-dashboard/user-dashboard.componen
 import { UserRegistrationComponent } from './user-registration/user-registration.component';
 import { AngularMaterialModule } from "./material-module";
 import { CookieService } from 'angular2-cookie/services/cookies.service';
+import { NotauthorizedComponent } from './notauthorized/notauthorized.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +23,8 @@ import { CookieService } from 'angular2-cookie/services/cookies.service';
     PagenotfoundComponent,
     AdminDashboardComponent,
     UserDashboardComponent,
-    UserRegistrationComponent
+    UserRegistrationComponent,
+    NotauthorizedComponent
   ],
   imports: [
     BrowserModule,

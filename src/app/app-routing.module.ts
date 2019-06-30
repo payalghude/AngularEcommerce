@@ -8,15 +8,17 @@ import { UserDashboardComponent } from './user-dashboard/user-dashboard.componen
 import { UserRegistrationComponent } from './user-registration/user-registration.component';
 import { AuthGuard } from './auth.guard';
 import { AdminGuard } from './admin.guard';
+import { NotauthorizedComponent } from './notauthorized/notauthorized.component';
 
 
 
 const routes: Routes = [
   {path:'', component: LoginComponent},
   {path:'dashboard' ,component:DashboardComponent},
-  {path:'admindashboard' ,component:AdminDashboardComponent, canActivate:[AuthGuard, AdminGuard]},
-  {path:'UserDashboard' ,component:UserDashboardComponent},
-  {path:'UserRegistration' ,component:UserRegistrationComponent},
+  {path:'admin-dashboard' ,component:AdminDashboardComponent, canActivate:[AuthGuard, AdminGuard]},
+  {path:'user-dashboard' ,component:UserDashboardComponent},
+  {path:'registration' ,component:UserRegistrationComponent},
+  {path:'unauthorized', component: NotauthorizedComponent},
   {path: '**', component: PagenotfoundComponent}
 ]
 
