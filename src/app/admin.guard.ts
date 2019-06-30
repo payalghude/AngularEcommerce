@@ -1,0 +1,33 @@
+import { Injectable } from '@angular/core';
+import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree } from '@angular/router';
+import { Observable } from 'rxjs';
+import { CookieService } from 'angular2-cookie/core';
+import {Router} from '@angular/router';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class AdminGuard implements CanActivate {
+  username:string;
+  constructor(private _cookieService:CookieService, public router:Router) {
+  }
+  canActivate(
+    next: ActivatedRouteSnapshot,
+    state: RouterStateSnapshot
+    
+    ):  boolean  {
+      debugger;
+      this.username =  this._cookieService.get("_verificationToken");
+       if ( this.username == 'admin')
+       {
+        return true;
+       }
+       else
+       {
+        this.router.navigate(['/']);
+        return false;
+       }
+  
+  }
+  
+}

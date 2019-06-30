@@ -13,7 +13,7 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
 import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
 import { UserRegistrationComponent } from './user-registration/user-registration.component';
 import { AngularMaterialModule } from "./material-module";
-
+import { CookieService } from 'angular2-cookie/services/cookies.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +30,7 @@ import { AngularMaterialModule } from "./material-module";
     AngularMaterialModule,
     FormsModule
   ],
-  providers: [],
+  providers: [CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
