@@ -12,7 +12,7 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
 import { UserRegistrationComponent } from './user-registration/user-registration.component';
-
+import { AngularMaterialModule } from "./material-module";
 
 @NgModule({
   declarations: [
@@ -27,6 +27,7 @@ import { UserRegistrationComponent } from './user-registration/user-registration
   imports: [
     BrowserModule,
     AppRoutingModule,
+    AngularMaterialModule,
     FormsModule
   ],
   providers: [],
